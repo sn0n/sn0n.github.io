@@ -1,4 +1,5 @@
 # sn0n.github.io
-notes
+Generated using:  https://github.com/blokz/gen 
+
 
 [License](./LICENSE)
