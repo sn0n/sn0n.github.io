@@ -9,10 +9,10 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/nedb/1.8.0/nedb.js"></script>
-<script type="text/javascript" src="./assets/js/demo.json"></script>
-<script type="text/javascript" src="./assets/js/demo.js"></script>
+<script type="text/javascript" src="/assets/js/demo.json"></script>
+<script type="text/javascript" src="/assets/js/demo.js"></script>
 <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-<link rel="stylesheet" href="./assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/styles.css">
 <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue-pink.min.css" />
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-2112936-2"></script>
@@ -47,7 +47,7 @@
             <button id="demo-menu-lower-left"
             class="mdl-button mdl-js-button mdl-button--icon">
             <i class="icon-menu"></i>
-    </button> <a href="./demo.html" style="color: white; text-decoration: none">
+    </button> <a href="../" style="color: white; text-decoration: none">
         sn0n`s blokland
     </a></h1>
     
@@ -59,10 +59,11 @@
     <span id="side-bar"><!-- phrasing -->
             
 
-
+<span class="sideBarTitle">Quick Links:</span>
 
 <!-- ##### EDIT BELOW ##### -->
-
+    <a href="/projects/index.html">Projects</a>
+    <a href="/contact.html">Contact</a>
 <!-- ##### EDIT ABOVE ##### -->                      
 
             <span class="sideBarTitle">Open Source</span><br />
@@ -91,10 +92,11 @@
   
      
     <div class="bio">
-      <img id="default_pic" class="profile_pic">
-      <div id="name"></div>
-      <div id="age"></div>
-       <div id="location"></div>
+      <div id="userpic"><img id="default_pic" class="profile_pic"></div>
+      <span id="name" class="name"></span> - 
+      <small><span id="usertitle" class="UserTitle"></span></small><br />
+      Age: <span id="age"></span> || Sign:<span id="sign"></span><br />
+      Location: <span id="location"></span><br />
    <div id="biofull"></div>
    <!-- work / goals
    hobbies/intersts
@@ -103,14 +105,13 @@
 </div>
      
 <div class="external">Load External ID resource: <span id="external"></span> <br />
-      <small>use : <a href="./demo.html?id=42">?id=42</a><br />
+  <small>use : <a href="./demo.html?id=42">?id=42</a><br />
 <a href="./demo.html?friend=8-bit">?friend=8-bit</a>
-	</small></div>
-   
+</small></div>    
    
    <button onclick="demo()" id="header" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">Playground</button>
            <div id="playground">
-             this is the sandbox          
+             sandbox here         
            </div>
    
 

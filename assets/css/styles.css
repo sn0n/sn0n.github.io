@@ -11,6 +11,13 @@
   padding: 3px;
   }
   
+.name {
+margin-bottom: 0px
+}
+
+.UserTitle {
+ margin-top: 2px;
+}
 
 /*************************************
  * TITLE: Sinorca Screen Stylesheet  *

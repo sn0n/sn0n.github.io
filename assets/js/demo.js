@@ -2,12 +2,12 @@
 var count = 0;
 // multiple line variable use backticks
 var playgroun1 = `
-    hello world!
+    You clicked once, you won't see this again. ^>^
 `;
 // data variable is in demo.json 
 var mydata = JSON.parse(data);
 
-// this checks for url variables like ?id=42&name=steve
+// this checks for url variables like ?id=42&friend=8-bit
 function getQueryVariable(variable)
 {
        var query = window.location.search.substring(1);
@@ -23,8 +23,12 @@ function getQueryVariable(variable)
 window.onload = function loading(){
 
 
-document.getElementById("name").innerHTML = "Rob";
-document.getElementById("age").innerHTML = mydata[0].age;
+document.getElementById("name").innerHTML = mydata[0].name;
+document.getElementById("usertitle").innerHTML = mydata[0].title;
+var year = new Date();
+var age = year.getFullYear() - mydata[0].birthyear;
+document.getElementById("age").innerHTML = age;
+document.getElementById("sign").innerHTML = mydata[0].sign;
 document.getElementById("location").innerHTML = mydata[0].location;
 document.getElementById("default_pic").src = mydata[0].default_pic;
 document.getElementById("biofull").innerHTML = mydata[0].biofull;
@@ -33,12 +37,14 @@ document.getElementById("external").innerHTML = getQueryVariable("id");
 } else {
 document.getElementById("external").innerHTML = "none";
 }
-	
 if (getQueryVariable("friend") === "8-bit") {
 	document.getElementById("name").innerHTML = "8-bit";
-	document.getElementById("age").innerHTML = "88";
+    document.getElementById("age").innerHTML = "88";
+    document.getElementById("usertitle").innerHTML = "guru";
+    document.getElementById("sign").innerHTML = "infinity";
 	document.getElementById("location").innerHTML = "Online";
-	document.getElementById("biofull").innerHTML = "classic";
+    document.getElementById("biofull").innerHTML = "classic";
+    document.getElementById("userpic").innerHTML = "<i class='icon-user icons'></i>";
 } else {
 	
 }

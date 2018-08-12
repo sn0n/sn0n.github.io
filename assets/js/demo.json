@@ -1,10 +1,12 @@
 data = `
 [
 	{
-			"name" : "Rob Foraker", 
-			"age" : "38", 
+			"name" : "Rob Foraker",
+			"title" : "sn0n",
+			"birthyear" : "1980",
+			"sign" : "Sagittarius",
 			"location" : "Brentwood, CA USA",
-            "default_pic" : "./assets/images/demo.jpg",
+            "default_pic" : "/assets/images/demo.jpg",
             "biofull" : "I like playing with words, pictures, things & such. Life is my playground. I've been a nerd geek dork since before it was cool, and I tell ya, kids have it easy these days. Original Hipster, mainly because my parents could afford or refused to buy me new clothes. I was born in 1980, a time between times, Not a Gen-Xer, Nor a Millenial or part of Gen-Y really... a Xennial or something, I think that's what they are calling us these days. Started playing with computers arund 1990, before that I was taking apart every electronic thing I could get my hands on, playing NES, or dorking around playing chess with various family members. Once I discovered computers it was pretty much a wrap on social life... Then in 1993 Magic: The Gathering came around,... more words later.. I'm tired. ^>^ "
 	},
 	{
