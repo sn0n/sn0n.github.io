@@ -43,23 +43,26 @@ steem.api.getDiscussionsByAuthorBeforeDate(user, 'profile', now, 1, (err, result
     document.getElementById("location").innerHTML = blokify[0].location;
     document.getElementById("gender").innerHTML = blokify[0].gender;
 
+    if (blokify[0].skills !== undefined) {
     var skills = blokify[0].skills;
-    
     skillsLog = skills.split(',');
     skillsLog.forEach(function(entry) {
         console.log(entry);
         entryy = entry.replace(/\s+/g, '');
         entryy = entryy.replace(/[^a-zA-Z0-9]/g,'');
         entryy = entryy.toLowerCase();
-        
 var a = document.createElement('a');
 var linkText = document.createTextNode(entry);
 a.appendChild(linkText);
 a.title = entry;
-a.href = "http://steemit.com/trending/"+entryy;
+a.target = "_blank";
+a.href = "https://steemit.com/trending/"+entryy;
 document.getElementById("skills").appendChild(a);
-
-
+console.log(entry)
+});
+} else {
+    console.log("try again skills")
+}
 //var a = document.createElement('a');
 //var linkText = document.createTextNode(entry);
 //a.appendChild(linkText);
@@ -67,7 +70,7 @@ document.getElementById("skills").appendChild(a);
 //a.href = "http://steemit.com/trending/"+entry;
 //document.getElementById("skills").appendChild(a);
 
-    });
+  
 
     //document.getElementById("skills").innerHTML = blokify[0].skills;
     document.getElementById("biofull").innerHTML = blokify[0].biofull;
@@ -76,15 +79,18 @@ document.getElementById("skills").appendChild(a);
 
 
 // start friends section
-document.getElementById("Friend1").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend1+ "' >"+ blokify[1].Friend1+ "</a>";
-document.getElementById("Friend2").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend2+ "' >"+ blokify[1].Friend2+ "</a>";
-document.getElementById("Friend3").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend3+ "' >"+ blokify[1].Friend3+ "</a>";
-document.getElementById("Friend4").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend4+ "' >"+ blokify[1].Friend4+ "</a>";
-document.getElementById("Friend5").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend5+ "' >"+ blokify[1].Friend5+ "</a>";
-document.getElementById("Friend6").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend6+ "' >"+ blokify[1].Friend6+ "</a>";
-document.getElementById("Friend7").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend7+ "' >"+ blokify[1].Friend7+ "</a>";
-document.getElementById("Friend8").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend8+ "' >"+ blokify[1].Friend8+ "</a>";
-
+if (blokify[1] !== undefined) {
+    document.getElementById("Friend1").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend1+ "' >"+ blokify[1].Friend1+ "</a>";
+    document.getElementById("Friend2").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend2+ "' >"+ blokify[1].Friend2+ "</a>";
+    document.getElementById("Friend3").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend3+ "' >"+ blokify[1].Friend3+ "</a>";
+    document.getElementById("Friend4").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend4+ "' >"+ blokify[1].Friend4+ "</a>";
+    document.getElementById("Friend5").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend5+ "' >"+ blokify[1].Friend5+ "</a>";
+    document.getElementById("Friend6").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend6+ "' >"+ blokify[1].Friend6+ "</a>";
+    document.getElementById("Friend7").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend7+ "' >"+ blokify[1].Friend7+ "</a>";
+    document.getElementById("Friend8").innerHTML = "<a href='http://steemit.com/"+ blokify[1].Friend8+ "' >"+ blokify[1].Friend8+ "</a>";
+} else {
+    console.log("no friends")
+}
 
 
 
