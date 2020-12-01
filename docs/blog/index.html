@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Crypto Pack #001 - snahn&#39;s stickers</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="../css/styles.css">
+
+
+</head>
+
+<body>
+
+  <header>
+    <!-- ##### Header ##### -->
+<span style="position: absolute; left: .25em; top: .25em; font-size: 2em; color: white; z-index: 1">snahn&#39;s stickers</span>
+  </header>
+
+  <nav>
+    <!-- ##### navigation ##### -->
+<nav style="right: 10px; top: 20px;  position: absolute; color: white; z-index: 1">
+  <a class="navi" href="#learnmore">Learn More</a>
+  <a class="navi" href="#" onClick="DisplayPostFAQ()">About &amp; FAQ</a>
+  <a class="navi" href="#footer">Contact &amp; Support</a>
+</nav>
+
+  </nav>
+
+  <main>
+    
+<div id="post" class="text">
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@hiveio/hive-js/dist/hive.min.js"></script>
+<script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+
+<script>
+    const now = new Date().toISOString().split('.')[0];
+    window.onload = function loading() {
+
+        var user = document.getElementById("user").innerText;
+console.log(user + " is the default hive user");
+
+
+        hive.api.getDiscussionsByAuthorBeforeDate(user, null, now, 10, (err, result) => {
+
+            // testing for loop for posts. 
+            // data for each post in a loop
+
+            for (var i = 0; i < result.length; i++) {
+                console.log(" for loop data : " + JSON.stringify(result[i]));
+                //thisPost = JSON.parse(JSON.stringify(result[i]));
+                console.log("Author: " + result.author);
+                console.log("i is " + i);
+            }
+        var md = new Remarkable();
+
+
+        md.set({
+    html: true,
+    breaks: true,
+    xhtmlOut: true,
+    linkify: true
+});
+
+            // TODO: set loop for each & display inline popup
+            var recent1 = JSON.parse(JSON.stringify(result[0]));
+            //console.log("recent1 from main: " + recent1.body);
+            var recent1date = recent1.created.slice(0, 10);
+
+            var div = document.getElementById('post');
+
+       
+            
+
+            // TODO: set loop for each & display inline popup
+            var recent1 = JSON.parse(JSON.stringify(result[0]));
+            //console.log("recent1 from main: " + recent1.body);
+            var recent1date = recent1.created.slice(0, 10);
+            post1 = md.render(recent1.body).replace("\n", "");
+            post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
+            div.innerHTML += '<div id="post"><h1>' + recent1.title + "</h1><small>" + recent1date + "</small><p>" + post1 + "</p></div>";
+
+           
+            //document.getElementById("HivePost").innerHTML = marked(recent1.body);
+            //console.log("TESTING RECENT POST: " + recent1.body);
+
+
+
+
+            var recent2 = JSON.parse(JSON.stringify(result[1]));
+            //console.log("recent 2")
+            //console.log(recent2);
+            var recent2date = recent2.created.slice(0, 10);
+            post2 = md.render(recent2.body).replace("\n", "");
+            post2 = post2.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
+            div.innerHTML += '<div id="post"><h1>' + recent2.title + "</h1><small>" + recent2date + "</small><p>" + post2 + "</p></div>";
+
+
+            //document.getElementById("HivePost").innerHTML = marked(recent1.body);
+            //console.log("TESTING RECENT POST: " + recent2.body);
+
+
+
+            var recent3 = JSON.parse(JSON.stringify(result[2]));
+            //console.log(recent3);
+            var recent3date = recent3.created.slice(0, 10);
+            post3 = md.render(recent3.body).replace("\n", "");
+            post3 = post3.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
+            div.innerHTML += '<div id="post"><h1>' + recent3.title + "</h1><small>" + recent3date + "</small><p>" + post3 + "</p></div>";
+
+
+            //document.getElementById("HivePost").innerHTML = marked(recent1.body);
+            //console.log("TESTING RECENT POST: " + recent3.body);
+
+
+
+            // view more on peakd
+            div.innerHTML += "<br /><div>View More on <a href='http://peakd.com/@" + user + "/' target='_blank'>peakd.com/@" + user + "</a></div><hr />";
+        }); 
+    };
+</script>
+  </main>
+
+  <footer>
+    <!-- ##### Footer ##### -->
+<div class="footer" id="footer">
+  <div class="column">
+    <h3>Contact &amp; Support</h3>
+    <p><a href="https://discord.gg/6QmMgJC" class="navi">Discord</a></p>
+    <p><a href="https://peakd.com/@giftgiver" class="navi">Hive</a></p>
+    <p><a href="mailto:giftgiver@ryamer.com" class="navi">e-Mail</a></p>
+  </div>
+  <div class="column">
+    <h3>Advertise with Us</h3>
+    <p><a href="https://discord.gg/992ZD4d" class="navi">Discord</a></p>
+    <p><a href="mailto:giftgiver@ryamer.com" class="navi">e-Mail</a></p>
+  </div>
+  <div class="column">
+    <h3>Support Us</h3>
+    <p><a href="https://vote.hive.uno/@hextech" class="navi">Vote for Our Witness</a></p>
+    <p><a href="https://peakd.com/@giftgiver" class="navi">Donate Hive</a></p>
+  </div>
+</div>
+
+
+<div
+   style="position: fixed; left: 50%; border: 1px dashed lightslategray; transform: translate(-50%, 0); text-align: center; width:728px; height:90px; bottom: 0px; font-size: 2em; color: white; z-index: 1;">
+   <div style="color: white; padding: 0px; margin: 0px; font-size: .42em; margin-top: -1.05em; position: fixed;">Ad</div>
+   <a href="https://self-help.dev" target="_blank"><img src="./images/selfhelpdev.png"></a>
+</div>
+<!-- ^^^ Ad Block-->
+  </footer>
+
+  <script src="/js/hiveland.js"></script>
+</body>
+
+</html>
