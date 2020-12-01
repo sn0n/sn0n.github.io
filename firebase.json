@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": "docs",
+    "site": "sn0n-dev",
     "ignore": [
       "firebase.json",
       "**/.*",
