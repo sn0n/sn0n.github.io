@@ -4,7 +4,7 @@ module.exports = {
     outputPath: './docs'
   },
   site: {
-    title: "snahn's stickers",
-    product: 'Crypto Pack #001'
+    title: "sn0n's playground",
+    version: 'v0.001'
   }
 };

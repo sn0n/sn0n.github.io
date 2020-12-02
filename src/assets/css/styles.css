@@ -168,6 +168,7 @@ input[type=text] {
     color: #00d1b2;
     margin: 0px;
     padding: 0px;
+    text-align: center;
 }
 
 
@@ -201,5 +202,6 @@ input[type=text] {
     flex-shrink: 1;
     padding: .75rem;
     float: left;
-    width: 25%;
+    margin: 0px;
+    width: 31%;
 }
