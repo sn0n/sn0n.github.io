@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>v0.001 - sn0n&#39;s playground</title>
+  <title>sn0n&#39;s Place - v0.001 </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="../css/styles.css">
@@ -14,21 +14,24 @@
 
   <header>
     <!-- ##### Header ##### -->
-<span style="position: absolute; left: .25em; top: .25em; font-size: 2em; color: white; z-index: 1">sn0n&#39;s playground</span>
+<span style="position: absolute; left: .25em; top: .25em; font-size: 2em;   text-shadow: -1px 0 #00d1b2, 0 1px #00d1b2, 1px 0 #00d1b2, 0 -1px #00d1b2; color: white; z-index: 1">sn0n&#39;s Place</span>
   </header>
 
   <nav>
     <!-- ##### navigation ##### -->
-<nav style="right: 10px; top: 20px;  position: absolute; color: white; z-index: 1">
-  <a class="navi" href="#learnmore">Learn More</a>
-  <a class="navi" href="#" onClick="DisplayPostFAQ()">About &amp; FAQ</a>
-  <a class="navi" href="#footer">Contact &amp; Support</a>
+<nav style="right: 10px; top: 20px;  position: fixed;  text-shadow: -1px 0 #00d1b2, 0 1px #00d1b2, 1px 0 #00d1b2, 0 -1px #00d1b2; color: white; z-index: 1">
+  <a class="navi" href="../">Home</a>
+  <a class="navi" href="../blog">Journal</a>
+  <a class="navi" href="../projects">Projects</a>
+  <a class="navi" href="../more">More</a>
 </nav>
 
   </nav>
 
   <main>
     
+<h1 style="color: #00d1b2; margin: auto; text-align: center; justify-content: center; margin-top: 65px; font-size: 2em;">sn0n's $hive feed</h1>
+
 <div id="post" class="text">
 
 </div>
@@ -39,7 +42,7 @@
     const now = new Date().toISOString().split('.')[0];
     window.onload = function loading() {
 
-        var user = document.getElementById("user").innerText;
+        var user = "sn0n";
 console.log(user + " is the default hive user");
 
 
@@ -80,7 +83,7 @@ console.log(user + " is the default hive user");
             var recent1date = recent1.created.slice(0, 10);
             post1 = md.render(recent1.body).replace("\n", "");
             post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent1.title + "</h1><small>" + recent1date + "</small><p>" + post1 + "</p></div>";
+            div.innerHTML += '<div id="post" style="display: block; border-bottom: 2px solid red; padding: 1em; margin: 1em; background-color: black; color: #00d1b2; text-align: left"><h1>' + recent1.title + "</h1><small>" + recent1date + "</small><p>" + post1 + "</p></div>";
 
            
             //document.getElementById("HivePost").innerHTML = marked(recent1.body);
@@ -95,7 +98,7 @@ console.log(user + " is the default hive user");
             var recent2date = recent2.created.slice(0, 10);
             post2 = md.render(recent2.body).replace("\n", "");
             post2 = post2.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent2.title + "</h1><small>" + recent2date + "</small><p>" + post2 + "</p></div>";
+            div.innerHTML += '<div id="post" style="display: block; border-bottom: 2px solid red; padding: 1em; margin: 1em; background-color: black; color: #00d1b2; text-align: left"><h1>' + recent2.title + "</h1><small>" + recent2date + "</small><p>" + post2 + "</p></div>";
 
 
             //document.getElementById("HivePost").innerHTML = marked(recent1.body);
@@ -108,7 +111,7 @@ console.log(user + " is the default hive user");
             var recent3date = recent3.created.slice(0, 10);
             post3 = md.render(recent3.body).replace("\n", "");
             post3 = post3.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent3.title + "</h1><small>" + recent3date + "</small><p>" + post3 + "</p></div>";
+            div.innerHTML += '<div id="post" style="display: block; border-bottom: 2px solid red; padding: 1em; margin: 1em; background-color: black; color: #00d1b2; text-align: left"><h1>' + recent3.title + "</h1><small>" + recent3date + "</small><p>" + post3 + "</p></div>";
 
 
             //document.getElementById("HivePost").innerHTML = marked(recent1.body);
@@ -117,7 +120,7 @@ console.log(user + " is the default hive user");
 
 
             // view more on peakd
-            div.innerHTML += "<br /><div>View More on <a href='http://peakd.com/@" + user + "/' target='_blank'>peakd.com/@" + user + "</a></div><hr />";
+            div.innerHTML += "<br /><div style='display: block; border: 2px solid red; padding: 1em; margin: 1em; background-color: black; color: #00d1b2; text-align: left'>View More on <a href='http://peakd.com/@" + user + "/' target='_blank'>peakd.com/@" + user + "</a></div>";
         }); 
     };
 </script>
@@ -128,27 +131,32 @@ console.log(user + " is the default hive user");
 <div class="footer" id="footer">
 
   <div class="column">
-    <h3>Section</h3>
+    <h3>Section 1</h3>
     <p><a href="#" class="navi">links</a></p>
   </div>
 
   <div class="column">
-    <h3>Section</h3>
+    <h3>Section 2</h3>
     <p><a href="#" class="navi">links</a></p>
   </div>
 
   <div class="column">
-    <h3>Section</h3>
+    <h3>Section 3</h3>
+    <p><a href="#" class="navi">links</a></p>
+    <p><a href="#" class="navi">links</a></p>
     <p><a href="#" class="navi">links</a></p>
   </div>
-  
+
 </div>
 
 
+<img onclick="javascript:location.href='#'" src="../images/puffboy.gif" style="padding: 2em">
+
+
 <div
-   style="position: fixed; left: 50%; border: 1px dashed lightslategray; transform: translate(-50%, 0); text-align: center; width:728px; height:90px; bottom: 0px; font-size: 2em; color: white; z-index: 1;">
-   <div style="color: white; padding: 0px; margin: 0px; font-size: .42em; margin-top: -1.05em; position: fixed;">Ad</div>
-   <a href="https://self-help.dev" target="_blank"><img src="./images/selfhelpdev.png"></a>
+  style="position: fixed; left: 50%; border: 1px dashed lightslategray; transform: translate(-50%, 0); text-align: center; width:728px; height:90px; bottom: 0px; font-size: 2em; color: white; z-index: 1;">
+  <div style="color: white; padding: 0px; margin: 0px; font-size: .42em; margin-top: -1.05em; position: fixed;">Ad</div>
+  <a href="https://blokz.io" target="_blank"><img src="../images/blokz_ad.png"></a>
 </div>
 <!-- ^^^ Ad Block-->
   </footer>

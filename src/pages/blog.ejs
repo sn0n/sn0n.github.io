@@ -1,4 +1,6 @@
 
+<h1 style="color: #00d1b2; margin: auto; text-align: center; justify-content: center; margin-top: 65px; font-size: 2em;">sn0n's $hive feed</h1>
+
 <div id="post" class="text">
 
 </div>
@@ -9,7 +11,7 @@
     const now = new Date().toISOString().split('.')[0];
     window.onload = function loading() {
 
-        var user = document.getElementById("user").innerText;
+        var user = "sn0n";
 console.log(user + " is the default hive user");
 
 
@@ -50,7 +52,7 @@ console.log(user + " is the default hive user");
             var recent1date = recent1.created.slice(0, 10);
             post1 = md.render(recent1.body).replace("\n", "");
             post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent1.title + "</h1><small>" + recent1date + "</small><p>" + post1 + "</p></div>";
+            div.innerHTML += '<div id="post" style="display: block; border-bottom: 2px solid red; padding: 1em; margin: 1em; background-color: black; color: #00d1b2; text-align: left"><h1>' + recent1.title + "</h1><small>" + recent1date + "</small><p>" + post1 + "</p></div>";
 
            
             //document.getElementById("HivePost").innerHTML = marked(recent1.body);
@@ -65,7 +67,7 @@ console.log(user + " is the default hive user");
             var recent2date = recent2.created.slice(0, 10);
             post2 = md.render(recent2.body).replace("\n", "");
             post2 = post2.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent2.title + "</h1><small>" + recent2date + "</small><p>" + post2 + "</p></div>";
+            div.innerHTML += '<div id="post" style="display: block; border-bottom: 2px solid red; padding: 1em; margin: 1em; background-color: black; color: #00d1b2; text-align: left"><h1>' + recent2.title + "</h1><small>" + recent2date + "</small><p>" + post2 + "</p></div>";
 
 
             //document.getElementById("HivePost").innerHTML = marked(recent1.body);
@@ -78,7 +80,7 @@ console.log(user + " is the default hive user");
             var recent3date = recent3.created.slice(0, 10);
             post3 = md.render(recent3.body).replace("\n", "");
             post3 = post3.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent3.title + "</h1><small>" + recent3date + "</small><p>" + post3 + "</p></div>";
+            div.innerHTML += '<div id="post" style="display: block; border-bottom: 2px solid red; padding: 1em; margin: 1em; background-color: black; color: #00d1b2; text-align: left"><h1>' + recent3.title + "</h1><small>" + recent3date + "</small><p>" + post3 + "</p></div>";
 
 
             //document.getElementById("HivePost").innerHTML = marked(recent1.body);
@@ -87,7 +89,7 @@ console.log(user + " is the default hive user");
 
 
             // view more on peakd
-            div.innerHTML += "<br /><div>View More on <a href='http://peakd.com/@" + user + "/' target='_blank'>peakd.com/@" + user + "</a></div><hr />";
+            div.innerHTML += "<br /><div style='display: block; border: 2px solid red; padding: 1em; margin: 1em; background-color: black; color: #00d1b2; text-align: left'>View More on <a href='http://peakd.com/@" + user + "/' target='_blank'>peakd.com/@" + user + "</a></div>";
         }); 
     };
 </script>
