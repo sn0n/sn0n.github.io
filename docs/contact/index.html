@@ -98,96 +98,22 @@
 
 <!-- ##### Main Copy ##### -->
 <main id="main-copy">
-  
-<script src="https://cdn.jsdelivr.net/npm/@hiveio/hive-js/dist/hive.min.js"></script>
-<script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+  <h1 id="introduction">Contact</h1>
+<p>
+    Discord: <a href="https://discord.gg/CgE3Sgr">blokz</a> (preferred)
+    <br />
+    HIVE: <a href="http://peakd.com/@sn0n" target="_blank">@sn0n</a>
+    <br /> 
+    Tele/SMS: (925)237-1340
+    <br /> 
+    Email: <a href="mailto:blokz@protonmail.com?Subject=blokz.io">blokz@protonmail.com</a>
+    <br />
+    GitHub: <a href="https://github.com/sn0n" target="_blank">sn0n</a>
+              
+    
+            </p>
 
-<script>
-    const now = new Date().toISOString().split('.')[0];
-    window.onload = function loading() {
-
-        var user = "sn0n";
-console.log(user + " is the default hive user");
-
-
-        hive.api.getDiscussionsByAuthorBeforeDate(user, null, now, 10, (err, result) => {
-
-            // testing for loop for posts. 
-            // data for each post in a loop
-
-            for (var i = 0; i < result.length; i++) {
-                console.log(" for loop data : " + JSON.stringify(result[i]));
-                //thisPost = JSON.parse(JSON.stringify(result[i]));
-                console.log("Author: " + result.author);
-                console.log("i is " + i);
-            }
-        var md = new Remarkable();
-
-
-        md.set({
-    html: true,
-    breaks: true,
-    xhtmlOut: true,
-    linkify: true
-});
-
-            // TODO: set loop for each & display inline popup
-            var recent1 = JSON.parse(JSON.stringify(result[0]));
-            //console.log("recent1 from main: " + recent1.body);
-            var recent1date = recent1.created.slice(0, 10);
-
-            var div = document.getElementById('main-copy');
-
-       
-            
-
-            // TODO: set loop for each & display inline popup
-            var recent1 = JSON.parse(JSON.stringify(result[0]));
-            //console.log("recent1 from main: " + recent1.body);
-            var recent1date = recent1.created.slice(0, 10);
-            post1 = md.render(recent1.body).replace("\n", "");
-            post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent1.title + "</h1><small>" + recent1date + "</small><p>" + post1 + "</p></div>";
-
-           
-            //document.getElementById("HivePost").innerHTML = marked(recent1.body);
-            //console.log("TESTING RECENT POST: " + recent1.body);
-
-
-
-
-            var recent2 = JSON.parse(JSON.stringify(result[1]));
-            //console.log("recent 2")
-            //console.log(recent2);
-            var recent2date = recent2.created.slice(0, 10);
-            post2 = md.render(recent2.body).replace("\n", "");
-            post2 = post2.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent2.title + "</h1><small>" + recent2date + "</small><p>" + post2 + "</p></div>";
-
-
-            //document.getElementById("HivePost").innerHTML = marked(recent1.body);
-            //console.log("TESTING RECENT POST: " + recent2.body);
-
-
-
-            var recent3 = JSON.parse(JSON.stringify(result[2]));
-            //console.log(recent3);
-            var recent3date = recent3.created.slice(0, 10);
-            post3 = md.render(recent3.body).replace("\n", "");
-            post3 = post3.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent3.title + "</h1><small>" + recent3date + "</small><p>" + post3 + "</p></div>";
-
-
-            //document.getElementById("HivePost").innerHTML = marked(recent1.body);
-            //console.log("TESTING RECENT POST: " + recent3.body);
-
-
-
-            // view more on peakd
-            div.innerHTML += "<br /><div style='display: block; padding: 1em; margin: 1em;  text-align: left'>View More on <a href='http://personal.community/?hive=" + user + "' target='_blank'>http://personal.community/?hive=" + user + "</a></div>";
-        }); 
-    };
-</script>
+<a class="topOfPage" href="#top" title="Go to the top of this page">^ TOP</a>
 </main>
 
 <!-- ##### Footer ##### -->

@@ -4,7 +4,7 @@ module.exports = {
     outputPath: './docs'
   },
   site: {
-    title: "sn0n's Place",
-    version: 'v0.001'
+    title: "sn0n was here",
+    version: 'v0.420'
   }
 };
