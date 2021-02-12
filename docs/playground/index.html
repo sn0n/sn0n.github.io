@@ -132,19 +132,9 @@ https://github.com/mervick/aes-everywhere/tree/master/javascript
 <script>
 
 
-    function generate(passed) {
-        // hivejs.broadcast.customJson(wif, requiredAuths, requiredPostingAuths, id, json, function(err, result) {
-        //console.log(err, result);
-        //});
-        console.log(JSON.parse(passed));
-        document.getElementById("generated").innerHTML = "<strong>Submitted</strong>";
 
-    }
 
     let first, second, third, fourth, fifth, sixth, phrase = "";
-    window.onload = function loading() {
-
-
 
         for (let i = 0; i < 6; i++) {
             first = Math.floor(Math.random() * 6 + 1);
@@ -155,40 +145,36 @@ https://github.com/mervick/aes-everywhere/tree/master/javascript
             dice = first + "" + second + "" + third + "" + fourth + "" + fifth;
             phrase += WordList[dice];
             document.getElementById("passphrase").innerHTML += "<span style='padding-left: 1em'>" + WordList[dice] + "</span>";
-
         }
-
         // encryption
         var encrypted = AES256.encrypt('Words, Pictures, things & such!', phrase);
         document.getElementById("passphrase").innerHTML += '<hr /><div>Phrase we are encrypting: <br /> Words, Pictures, things & such!</div>';
         document.getElementById("passphrase").innerHTML += "<br /><div>Encrypted <small>w/phrase</small>:</div><div style='overflow-wrap: break-word; max-width: 200px; margin: auto'>" + encrypted + "</div>";
         // decryption
         document.getElementById("passphrase").innerHTML += "<div style='margin-top: 20px'>Decrypted <small>w/phrase</small>:</div>" + AES256.decrypt(encrypted, phrase);
-
-
         let new_phrase = "passphrase: " + phrase;
         let account = "empty.space"
         let blokzchain_json = [
             {
-                "id": "blokzchain",
-                "json": [
-                    'block',
+                "blok": [
+                    'data',
                     {
-                        "passphrase": phrase,
-                        "to_encrypt": "Words, Pictures, things & such!",
+                        //"passphrase": phrase,
+                        //"to_encrypt": "Words, Pictures, things & such!",
                         "encrypted": encrypted
                     }
-                ],
-                "required_auths": [],
-                "required_posting_auths": ["empty.space"],
+                ]
             }
         ];
         document.getElementById("generated").innerHTML += "<button onclick='generate(`" + JSON.stringify(blokzchain_json) + "`)'>Submit Generated</button>";
 
-        console.log(blokzchain_json);
 
 
-    };
+    function generate(passed) {
+        console.log("passed:" + JSON.stringify(passed));
+        document.getElementById("generated").innerHTML = "<strong>Submitted</strong>";
+
+    }
 
 </script>
 </main>
