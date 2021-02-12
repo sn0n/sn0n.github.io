@@ -11,7 +11,7 @@ https://github.com/mervick/aes-everywhere/tree/master/javascript
 
     <div id="generated" style="height: 3em; padding: .5em">
     </div>
-    <h3 style="text-align: left;">Passphrase <small>generated at random</small></h3>
+    <h3 style="text-align: left;">Passphrase <small>(generated at random)</small></h3>
 
 </div>
 
@@ -89,10 +89,10 @@ var str = JSON.stringify(obj, undefined, 4);
         }
         // encryption
         var encrypted = AES256.encrypt('Words, Pictures, things & such!', phrase);
-        document.getElementById("passphrase").innerHTML += '<hr /><div>Phrase we are encrypting: <br /> Words, Pictures, things & such!</div>';
-        document.getElementById("passphrase").innerHTML += "<br /><div>Encrypted <small>w/phrase</small>:</div><div style='overflow-wrap: break-word; max-width: 200px; margin: auto'>" + encrypted + "</div>";
+        document.getElementById("passphrase").innerHTML += '<hr /><div>Phrase we are encrypting (payload): <br /> Words, Pictures, things & such!</div>';
+        document.getElementById("passphrase").innerHTML += "<br /><div>Encrypted <small>w/passphrase</small> (package):</div><div>" + encrypted + "</div>";
         // decryption
-        document.getElementById("passphrase").innerHTML += "<div style='margin-top: 20px'>Decrypted <small>w/phrase</small>:</div>" + AES256.decrypt(encrypted, phrase);
+        document.getElementById("passphrase").innerHTML += "<div style='margin-top: 20px'>Decrypted <small>w/phrase</small> (Verify same as payload):</div>" + AES256.decrypt(encrypted, phrase);
         let new_phrase = "passphrase: " + phrase;
         let account = "empty.space"
         let blokzchain_json = 

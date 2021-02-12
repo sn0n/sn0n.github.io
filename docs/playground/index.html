@@ -58,37 +58,47 @@
 <!-- ##### Side Bar #####  -->
 <nav id="side-bar">
   <div>
-  <p class="sideBarTitle">Navigate this page</p>
+  <p class="sideBarTitle">Extras:</p>
   <ul>
-    <li><a href="#introduction">&rsaquo; Introduction</a></li>
-    <li><a href="#cross-browser" title="Improved cross-browser compatibility">&rsaquo; Cross-browser</a></li>
-    <li><a href="#stylesheets" title="Modified stylesheets">&rsaquo; Stylesheets</a></li>
-    <li><a href="#accessibility" title="Improved accessibility">&rsaquo; Accessibility</a></li>
-  </ul>
-</div>
-
-<div>
-  <p class="sideBarTitle">Sample menu</p>
-  <ul>
-    <li><a href="../index.html">&rsaquo; Sidebar</a></li>
-    <li><span class="thisPage">&raquo; Links</span></li>
-    <li><a href="../index.html">&rsaquo; Go</a></li>
-    <li><a href="../index.html">&rsaquo; Here</a></li>
-    <li><a href="http://www.oswd.org/email.phtml?user=haran">&rsaquo; Submit comments</a></li>
+    <li><a href="../playground">&rsaquo; Playground</a></li>
   </ul>
 </div>
 
 <div class="lighterBackground">
-  <p class="sideBarTitle">Alternative stylesheet</p>
+  <p class="sideBarTitle">Support Me!</p>
   <span class="sideBarText">
-    Sinorca contains an alternative stylesheet that renders this side bar differently.
+    Donations can be sent to the following addresses, or sign up with services using these referral links, where we both
+    maybe get something cool.
   </span>
   <span class="sideBarText">
-    To view the alternative stylesheet in (certain)
+
+    <p>If you don't currently use Coinbase, get $10/ free with your first $100/ transaction, the ref link says buy or sell,
+    so maybe use this as an opportunity to transfer our some hive with blocktrades or hive-engine with pegged coins that
+    are on Coinbase, I've settled on Litecoin with Coinbase Wallet, <!-- find out more here: --></p>
+
+    <p><a href="https://www.coinbase.com/join/forake_z">Join coinbase</a></p>
+
+    <p>Earn more with Coinbase, checkout the following links for access to learn and earn for free, the FREE here is in the
+    form of a short video (most 2-4 minutes) and answering a simple question which was based on the theme of the video,
+    super easy to answer if you legit watch then.</p>
+
+    <p>No Bitcoin wallet? No way to get into crypto? No problem!!
+    Cashapp has a referral program where we both get $5 when you sign-up and make your first $5/ transfer to someone,
+    it's similar to venmo, but let's you buy stocks as well as has an integrated bitcoin wallet, check it out here:</p>
+
+
+    <p>CashApp: $blokzio<br /><a href="https://cash.app/app/XNLLMLS">Join cashapp</a></p>
+
+
+    <p>Let's chat:</p>
+
+    <p><a href="https://discord.gg/CgE3Sgr">Discord</a></p>
+
+    <!-- 
     <span class="titleTip" title="eg: Mozilla, Camino, Netscape 6+">Gecko-based browsers</span>,
     select <em>Sinorca (alternative)</em> from the <em>View</em> &rsaquo; <em>Use Style</em>
     submenu.
-  </span>
+  </span>  -->
 </div>
 
 <div>
@@ -115,7 +125,7 @@ https://github.com/mervick/aes-everywhere/tree/master/javascript
 
     <div id="generated" style="height: 3em; padding: .5em">
     </div>
-    <h3 style="text-align: left;">Passphrase <small>generated at random</small></h3>
+    <h3 style="text-align: left;">Passphrase <small>(generated at random)</small></h3>
 
 </div>
 
@@ -193,10 +203,10 @@ var str = JSON.stringify(obj, undefined, 4);
         }
         // encryption
         var encrypted = AES256.encrypt('Words, Pictures, things & such!', phrase);
-        document.getElementById("passphrase").innerHTML += '<hr /><div>Phrase we are encrypting: <br /> Words, Pictures, things & such!</div>';
-        document.getElementById("passphrase").innerHTML += "<br /><div>Encrypted <small>w/phrase</small>:</div><div style='overflow-wrap: break-word; max-width: 200px; margin: auto'>" + encrypted + "</div>";
+        document.getElementById("passphrase").innerHTML += '<hr /><div>Phrase we are encrypting (payload): <br /> Words, Pictures, things & such!</div>';
+        document.getElementById("passphrase").innerHTML += "<br /><div>Encrypted <small>w/passphrase</small> (package):</div><div>" + encrypted + "</div>";
         // decryption
-        document.getElementById("passphrase").innerHTML += "<div style='margin-top: 20px'>Decrypted <small>w/phrase</small>:</div>" + AES256.decrypt(encrypted, phrase);
+        document.getElementById("passphrase").innerHTML += "<div style='margin-top: 20px'>Decrypted <small>w/phrase</small> (Verify same as payload):</div>" + AES256.decrypt(encrypted, phrase);
         let new_phrase = "passphrase: " + phrase;
         let account = "empty.space"
         let blokzchain_json = 
