@@ -22,22 +22,58 @@ https://github.com/mervick/aes-everywhere/tree/master/javascript
 
 
 
+<style>
 
+pre {outline: 1px solid #ccc; padding: 5px; margin: 5px; }
+.string { color: green; }
+.number { color: darkorange; }
+.boolean { color: blue; }
+.null { color: magenta; }
+.key { color: red; }
+
+</style>
 
 
 <script>
 
+function output(inp) {
+    document.body.appendChild(document.createElement('pre')).innerHTML = inp;
+}
 
-<<<<<<< HEAD
-=======
+function syntaxHighlight(json) {
+    json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+\-]?\d+)?)/g, function (match) {
+        var cls = 'number';
+        if (/^"/.test(match)) {
+            if (/:$/.test(match)) {
+                cls = 'key';
+            } else {
+                cls = 'string';
+            }
+        } else if (/true|false/.test(match)) {
+            cls = 'boolean';
+        } else if (/null/.test(match)) {
+            cls = 'null';
+        }
+        return '<span class="' + cls + '">' + match + '</span>';
+    });
+}
+
+var obj = {a:1, 'b':'foo', c:[false,'false',null, 'null', {d:{e:1.3e5,f:'1.3e5'}}]};
+var str = JSON.stringify(obj, undefined, 4);
+
+
+
+
+
     function generate(passed) {
         // hivejs.broadcast.customJson(wif, requiredAuths, requiredPostingAuths, id, json, function(err, result) {
         //console.log(err, result);
         //});
         console.log(JSON.parse(passed));
-        document.getElementById("passphrase").innerHTML = "<strong>Submitted</strong><br /><code style='clear: both; background: lightgrey'>" + passed + "</code><hr />";
->>>>>>> 287259aff44fde277a1161f641cafc89f53f8811
-
+        document.getElementById("passphrase").innerHTML = "<strong>Submitted!</strong><br /><pre>" + syntaxHighlight(passed) + "</pre>";
+        }
+        
 
     let first, second, third, fourth, fifth, sixth, phrase = "";
 
@@ -59,26 +95,21 @@ https://github.com/mervick/aes-everywhere/tree/master/javascript
         document.getElementById("passphrase").innerHTML += "<div style='margin-top: 20px'>Decrypted <small>w/phrase</small>:</div>" + AES256.decrypt(encrypted, phrase);
         let new_phrase = "passphrase: " + phrase;
         let account = "empty.space"
-        let blokzchain_json = [
+        let blokzchain_json = 
             {
-                "blok": [
-                    'data',
+                "blokz box": [
+                    'craft',
                     {
-                        //"passphrase": phrase,
-                        //"to_encrypt": "Words, Pictures, things & such!",
-                        "encrypted": encrypted
+                        "passphrase": phrase,
+                        "payload": "Words, Pictures, things & such!",
+                        "package": encrypted
                     }
                 ]
             }
-        ];
-        document.getElementById("generated").innerHTML += "<button onclick='generate(`" + JSON.stringify(blokzchain_json) + "`)'>Submit Generated</button>";
+        ;
+        document.getElementById("generated").innerHTML += "<button onclick='generate(`" + JSON.stringify(blokzchain_json, undefined, 4) + "`)'>Submit Generated</button>";
 
 
 
-    function generate(passed) {
-        console.log("passed:" + JSON.stringify(passed));
-        document.getElementById("generated").innerHTML = "<strong>Submitted</strong>";
-
-    }
 
 </script>
