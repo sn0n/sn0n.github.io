@@ -1,4 +1,4 @@
-
+<h1>$HIVE blog for @sn0n</h1>
 <script src="https://cdn.jsdelivr.net/npm/@hiveio/hive-js/dist/hive.min.js"></script>
 <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
 
@@ -47,7 +47,7 @@ console.log(user + " is the default hive user");
             var recent1date = recent1.created.slice(0, 10);
             post1 = md.render(recent1.body).replace("\n", "");
             post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent1.title + "</h1><small>" + recent1date + "</small><p>" + post1 + "</p></div>";
+            div.innerHTML += '<div id="post"><h2>' + recent1.title + "</h2><small>" + recent1date + "</small><p>" + post1 + "</p></div><hr />";
 
            
             //document.getElementById("HivePost").innerHTML = marked(recent1.body);
@@ -62,7 +62,7 @@ console.log(user + " is the default hive user");
             var recent2date = recent2.created.slice(0, 10);
             post2 = md.render(recent2.body).replace("\n", "");
             post2 = post2.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent2.title + "</h1><small>" + recent2date + "</small><p>" + post2 + "</p></div>";
+            div.innerHTML += '<div id="post"><h2>' + recent2.title + "</h2><small>" + recent2date + "</small><p>" + post2 + "</p></div><hr />";
 
 
             //document.getElementById("HivePost").innerHTML = marked(recent1.body);
@@ -75,7 +75,7 @@ console.log(user + " is the default hive user");
             var recent3date = recent3.created.slice(0, 10);
             post3 = md.render(recent3.body).replace("\n", "");
             post3 = post3.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><h1>' + recent3.title + "</h1><small>" + recent3date + "</small><p>" + post3 + "</p></div>";
+            div.innerHTML += '<div id="post"><h2>' + recent3.title + "</h2><small>" + recent3date + "</small><p>" + post3 + "</p></div><hr />";
 
 
             //document.getElementById("HivePost").innerHTML = marked(recent1.body);
