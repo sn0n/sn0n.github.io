@@ -4,11 +4,11 @@
 personal development & self-help topics <br />
 
 ##### programming
-Dart & Flutter
+Javascript 
 
 ##### games
 Final Fantasy 1 (PSP)<br />
-Pokémon
+
 
 # useful tips 
 when you see 
