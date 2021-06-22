@@ -8,6 +8,7 @@ Javascript
 
 ##### games
 Final Fantasy 1 (PSP)<br />
+Chess
 
 
 # useful tips 
