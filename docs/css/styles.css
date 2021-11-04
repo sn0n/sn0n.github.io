@@ -217,15 +217,11 @@ body {
     text-decoration: none;
   }
   
-  #main-copy h1 {
-    color: white;
-    background-color: rgb(100,135,220);
-    font-size: 100%;
-    font-weight: bold;
-    margin: 1em 0 0 0;
-    padding: 0.5ex 0 0.5ex 1ex;
-  }
-  
+#posthead {
+  font-size: 2em;
+  padding-top: 1em
+}
+
   #main-copy .topOfPage {
     color: white;
     background-color: transparent;
