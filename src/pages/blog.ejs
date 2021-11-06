@@ -1,4 +1,4 @@
-<script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+<script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js" defer></script>
 
 <script>
     var div = document.getElementById('main-copy');
@@ -6,6 +6,9 @@
     var user = "sn0n";
         console.log(user + " is the default hive user");
 
+
+
+    window.onload = function loading() {
         var md = new Remarkable();
         md.set({
             html: true,
@@ -36,10 +39,6 @@
 
             });
         }
-    window.onload = function loading() {
-
-
-
         fetchNow();
     };
 </script>
