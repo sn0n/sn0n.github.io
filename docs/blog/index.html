@@ -97,74 +97,49 @@
 
 <!-- ##### Main Copy ##### -->
 <main id="main-copy" style="min-height: 150vh;">
-  
-<script src="https://cdn.jsdelivr.net/npm/@hiveio/hive-js/dist/hive.min.js"></script>
-<script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js"></script>
 
 <script>
     var div = document.getElementById('main-copy');
-    const now = new Date().toISOString().split('.')[0];
+
+    var user = "sn0n";
+        console.log(user + " is the default hive user");
+
+        var md = new Remarkable();
+        md.set({
+            html: true,
+            breaks: true,
+            xhtmlOut: true,
+            linkify: true
+        });
+        var fetchNow = function () {
+            fetch("https://api.deathwing.me", {
+                body: `{"jsonrpc":"2.0", "method":"bridge.get_account_posts", "params":{"sort":"posts", "account": "sn0n", "limit": 10}, "id":1}`,
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded"
+                },
+                method: "POST"
+            }).then(response => response.json()).then(data => {
+                console.log(data.result[0])
+                data.result.forEach(element => {
+                    console.log("texting + " + JSON.stringify(element))
+                    var recent1 = JSON.parse(JSON.stringify(element));
+                    //console.log("recent1 from main: " + recent1.body);
+                    var recent1date = recent1.created.slice(0, 10);
+                    post1 = md.render(recent1.body).replace("\n", "");
+                    post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
+                    div.innerHTML += '<div id="post"><div id="posthead">' + recent1.title + "</div><small>" + recent1date + "</small><p>" + post1 + "</p></div><img src='../images/seperator.png' width='99%' />";
+                });
+                // view more on peakd
+                div.innerHTML += "<br /><div style='display: block; padding: 1em; margin: 1em;  text-align: left'>View More on <a href='http://personal.community/?hive=" + user + "' target='_blank'>http://personal.community/?hive=" + user + "</a></div>";
+
+            });
+        }
     window.onload = function loading() {
 
-        var user = "sn0n";
-console.log(user + " is the default hive user");
 
 
-        hive.api.getDiscussionsByAuthorBeforeDate(user, null, now, 20, (err, result) => {
-
-            // testing for loop for posts. 
-            // data for each post in a loop
-
-            for (var i = 0; i < result.length; i++) {
-                console.log(" for loop data : " + JSON.stringify(result[i]));
-                //thisPost = JSON.parse(JSON.stringify(result[i]));
-                console.log("Author: " + result.author);
-                console.log("i is " + i);
-            }
-        var md = new Remarkable();
-
-
-        md.set({
-    html: true,
-    breaks: true,
-    xhtmlOut: true,
-    linkify: true
-});
-    console.log("debugging crap : " + JSON.stringify(result));
-
-    result.forEach(element => {
-        console.log("texting + " + JSON.stringify(element))
-        var recent1 = JSON.parse(JSON.stringify(element));
-            //console.log("recent1 from main: " + recent1.body);
-            var recent1date = recent1.created.slice(0, 10);
-            post1 = md.render(recent1.body).replace("\n", "");
-            post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<div id="post"><div id="posthead">' + recent1.title + "</div><small>" + recent1date + "</small><p>" + post1 + "</p></div><img src='../images/seperator.png' width='99%' />";
-    });
-
-
-            
-
-       
-            
-
-            // TODO: set loop for each & display inline popup
-
-           
-            //document.getElementById("HivePost").innerHTML = marked(recent1.body);
-            //console.log("TESTING RECENT POST: " + recent1.body);
-
-
-
-
-            //document.getElementById("HivePost").innerHTML = marked(recent1.body);
-            //console.log("TESTING RECENT POST: " + recent3.body);
-
-
-
-            // view more on peakd
-            div.innerHTML += "<br /><div style='display: block; padding: 1em; margin: 1em;  text-align: left'>View More on <a href='http://personal.community/?hive=" + user + "' target='_blank'>http://personal.community/?hive=" + user + "</a></div>";
-        }); 
+        fetchNow();
     };
 </script>
 </main>
