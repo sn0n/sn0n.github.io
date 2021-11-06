@@ -3,11 +3,6 @@
 <script>
     var div = document.getElementById('main-copy');
 
-    var user = "sn0n";
-        console.log(user + " is the default hive user");
-
-
-
     window.onload = function loading() {
         var md = new Remarkable();
         md.set({
@@ -17,7 +12,7 @@
             linkify: true
         });
         var fetchNow = function () {
-            fetch("https://api.deathwing.me", {
+            fetch("https://api.hive.blog", {
                 body: `{"jsonrpc":"2.0", "method":"bridge.get_account_posts", "params":{"sort":"posts", "account": "sn0n", "limit": 10}, "id":1}`,
                 headers: {
                     "Content-Type": "application/x-www-form-urlencoded"

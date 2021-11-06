@@ -173,3 +173,18 @@ html > body {
   background-color: transparent;
   text-decoration: underline;
 }
+
+#main-copy .topOfPage {
+  color: white;
+  background-color: transparent;
+  font-size: 91%;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 2.5ex 1ex 0 0;  /* For MSIE */
+  padding: 0;
+  float: right;
+}
+
+#main-copy > .topOfPage {
+  margin: 2.75ex 1ex 0 0;  /* For fully standards-compliant user agents */
+}
