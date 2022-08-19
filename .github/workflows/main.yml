@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: npm i nanogen
-    - run: nanogen build
+    - run: npm run build
     - name: Push changes
       run: |
         git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
