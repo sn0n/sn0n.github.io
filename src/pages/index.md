@@ -1,13 +1,16 @@
 # Current Interests
 
-##### general
-personal development & self-help topics <br />
+##### General
 
-##### programming
+personal development & self-help
+
+##### Learning
 Javascript 
 
-##### games
-Final Fantasy 1 (PSP)<br />
+##### Tinkering
+Terraria
+Ingress
+Final Fantasy 1 (PSP)
 Chess
 
 
