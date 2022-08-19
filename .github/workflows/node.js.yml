@@ -26,6 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm ig nanogen
+    - run: npm i -g nanogen
     - run: nanogen build
 
