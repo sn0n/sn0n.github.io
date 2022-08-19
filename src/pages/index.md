@@ -5,12 +5,17 @@
 personal development & self-help
 
 ##### Learning
+
 Javascript 
 
 ##### Tinkering
+
 Terraria
+
 Ingress
+
 Final Fantasy 1 (PSP)
+
 Chess
 
 
