@@ -1,14 +1,18 @@
-# Current Interests
+# Welcome
+to sn0n.com. The personal welsite of Rob Foraker, erm,... sn0n.
+
+## Currently interested in the following topics and stuff:
 
 ##### General
 
-personal development & self-help
+personal development & self-help (midlife crisis of a mess)
 
-##### Learning
+##### Programming
 
 Javascript 
+Dart / Flutter (just looking for now)
 
-##### Tinkering
+##### Tinkering (or playing)
 
 Terraria <br />
 Ingress <br />
