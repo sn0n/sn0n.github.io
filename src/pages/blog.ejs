@@ -27,7 +27,7 @@
                     var recent1date = recent1.created.slice(0, 10);
                     post1 = md.render(recent1.body).replace("\n", "");
                     post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-                    div.innerHTML += '<div id="post"><div id="posthead">' + recent1.title + "</div><small>" + recent1date + "</small><p>" + post1 + "</p></div><img src='../images/seperator.png' width='99%' />";
+                    div.innerHTML += '<div id="post"><div id="posthead">' + recent1.title + "</div><small>" + recent1date + "</small><div id='postbody'>" + post1 + "</div></div><img src='../images/seperator.png' width='99%' />";
                 });
                 // view more on peakd
                 div.innerHTML += "<br /><div style='display: block; padding: 1em; margin: 1em;  text-align: left'>View More on <a href='http://personal.community/@sn0n' target='_blank'>http://personal.community/@sn0n</a></div>";

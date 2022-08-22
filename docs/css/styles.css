@@ -149,10 +149,44 @@ html > body {
   text-decoration: none;
 }
 
+#post {
+  margin: 0px;
+  padding: 0px;
+}
+
 #posthead {
   font-size: 2em;
   font-weight: bolder;
-  padding-top: 1em
+  padding-top: 1em;
+}
+
+#postbody {
+  padding: 2em;
+}
+
+#post h1
+{
+    font-size: 1.5em;
+}
+#post h2
+{
+    font-size: 1.4em;
+}
+#post h3
+{
+    font-size: 1.3em;
+}
+#post h4
+{
+    font-size: 1.2em;
+}
+#post h5
+{
+    font-size: 1.1em;
+}
+#post h6
+{
+    font-size: 1em; 
 }
 
 #footer {
