@@ -10,13 +10,10 @@ Javascript
 
 ##### Tinkering
 
-Terraria
-
-Ingress
-
-Final Fantasy 1 (PSP)
-
-Chess
+Terraria <br />
+Ingress <br />
+Final Fantasy 1 (PSP) <br />
+Chess <br />
 
 
 # useful tips 

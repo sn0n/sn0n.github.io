@@ -23,8 +23,7 @@ Breaking down a creative process in one area of life will have benefits in other
 
 Anyways, I hope you enjoyed that little glimpse into me, and enjoy this site I've assembled for you, and selfishly, myself. Enjoy.
 
-The above stolen & edited from - 
-$HIVEPowered Social Media: <a href="https://personal.community/@sn0n">personal.community/@sn0n</a> 
+The above stolen & edited from  <a href="https://personal.community/@sn0n">personal.community/@sn0n</a> 
 
 
 <a class="topOfPage" href="#top" title="Go to the top of this page">^ TOP</a>
