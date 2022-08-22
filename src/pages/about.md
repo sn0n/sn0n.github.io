@@ -1,6 +1,6 @@
 # &gt;whoami
 
-I am snahn ip<br />
+I am Snahn ip<br />
 aka: sn0n <br />
 but really, Rob Foraker. 
 
