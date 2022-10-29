@@ -23,10 +23,8 @@ body {
 
 #blokzCanva {
   margin: auto;
-  background: #ffffff;
   border: 1px solid black;
-  width: 60ch;
-  height: 20ch;
+  width: 50%;
 }
 
 .doNotDisplay {
