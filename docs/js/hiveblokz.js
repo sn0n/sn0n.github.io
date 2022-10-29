@@ -2,7 +2,7 @@ var div = document.getElementById('hiveblokz');
 let apinode;
 let frontend;
 let hiveuser = document.currentScript.getAttribute('hiveuser');
-
+let seperator = "https://blokz.github.io/hiveblokz/seperator.png"
 //frontend
 if (!document.currentScript.getAttribute('frontend')) {
     console.log("frontend not set, using personal.community");
@@ -64,15 +64,16 @@ var fetchPosts = function () {
     }).then(response => response.json()).then(data => {
         // console.log(data.result[0])
         data.result.forEach(element => {
-            // console.log("texting + " + JSON.stringify(element))
-            //console.log("recent1 from main: " + recent1.body);
             var recent1date = element.created.slice(0, 10);
             post1 = parseMD(element.body);
             post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-            div.innerHTML += '<article><h1>' + element.title + "</h1><small>" + recent1date + "</small><div id='postbody'>" + post1 + "</div></article><hr />";
+            div.innerHTML += '<article><h1>'
+                + element.title + "</h1><small>"
+                + recent1date + "</small><div id='postbody'>"
+                + post1 + "</div></article><img src='"+ seperator +"' width='99%' />";
         });
         // view more on peakd
-        div.innerHTML += "<br /><div style='display: block; padding: 1em; margin: 1em;  text-align: left'>View More on <a href='"+frontend+hiveuser+"' target='_blank'>"+frontend+hiveuser+"</a></div>";
+        div.innerHTML += "<br /><div style='display: block; padding: 1em; margin: 1em;  text-align: left'>View More on <a href='" + frontend + hiveuser + "' target='_blank'>" + frontend + hiveuser + "</a></div>";
     });
 }
 fetchPosts();

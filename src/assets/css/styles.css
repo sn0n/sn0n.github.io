@@ -1,6 +1,6 @@
 body {
   color: black;
-  background-color: rgb(240,240,240);
+  background-color: rgb(240, 240, 240);
   font-family: verdana, helvetica, arial, sans-serif;
   font-size: 71%;
   /* Enables font size scaling in MSIE */
@@ -8,7 +8,7 @@ body {
   padding: 0;
 }
 
-html > body {
+html>body {
   font-size: 8.5pt;
 }
 
@@ -18,7 +18,7 @@ html > body {
 
 .superHeader {
   color: white;
-  background-color: rgb(100,135,220);
+  background-color: rgb(100, 135, 220);
   height: 2em;
 }
 
@@ -30,8 +30,8 @@ html > body {
 
 
 .midHeader {
-  color: rgb(39,78,144);
-  background-color: rgb(140,170,230);
+  color: rgb(39, 78, 144);
+  background-color: rgb(140, 170, 230);
 }
 
 .headerTitle {
@@ -43,7 +43,7 @@ html > body {
 
 .subHeader {
   color: white;
-  background-color: rgb(0,51,153);
+  background-color: rgb(0, 51, 153);
   margin: 0;
   padding: 1ex 1ex 1ex 1.5mm;
 }
@@ -62,11 +62,11 @@ html > body {
   width: 15em;
   float: left;
   clear: left;
-  border-right: 1px solid rgb(153,153,153);
+  border-right: 1px solid rgb(153, 153, 153);
 }
 
 #side-bar div {
-  border-bottom: 1px solid rgb(153,153,153);
+  border-bottom: 1px solid rgb(153, 153, 153);
 }
 
 .sideBarTitle {
@@ -88,8 +88,9 @@ html > body {
   /* Circumvents a rendering bug (?) in MSIE 6.0 */
 }
 
-#side-bar a, .thisPage {
-  color: rgb(0,102,204);
+#side-bar a,
+.thisPage {
+  color: rgb(0, 102, 204);
   background-color: transparent;
   text-decoration: none;
   margin: 0;
@@ -99,7 +100,7 @@ html > body {
 
 #side-bar a:hover {
   color: white;
-  background-color: rgb(100,135,220);
+  background-color: rgb(100, 135, 220);
   text-decoration: none;
 }
 
@@ -130,7 +131,7 @@ html > body {
   line-height: 1.5em;
   min-height: 100vh;
   padding: 0.5mm 5mm 5mm 5mm;
-  border-left: 1px solid rgb(153,153,153);
+  border-left: 1px solid rgb(153, 153, 153);
   margin: 0 0 0 15em;
 }
 
@@ -140,7 +141,7 @@ html > body {
 }
 
 #main-copy a {
-  color: rgb(0,102,204);
+  color: rgb(0, 102, 204);
   background-color: transparent;
   text-decoration: underline;
 }
@@ -164,34 +165,33 @@ html > body {
   padding: 2em;
 }
 
-#post h1
-{
-    font-size: 1.5em;
+#post h1 {
+  font-size: 1.5em;
 }
-#post h2
-{
-    font-size: 1.4em;
+
+#post h2 {
+  font-size: 1.4em;
 }
-#post h3
-{
-    font-size: 1.3em;
+
+#post h3 {
+  font-size: 1.3em;
 }
-#post h4
-{
-    font-size: 1.2em;
+
+#post h4 {
+  font-size: 1.2em;
 }
-#post h5
-{
-    font-size: 1.1em;
+
+#post h5 {
+  font-size: 1.1em;
 }
-#post h6
-{
-    font-size: 1em; 
+
+#post h6 {
+  font-size: 1em;
 }
 
 #footer {
   color: white;
-  background-color: rgb(100,135,220);
+  background-color: rgb(100, 135, 220);
   font-size: 91%;
   margin: 0;
   padding: 1em 2.5mm 22.5ex 2.5mm;
@@ -215,20 +215,45 @@ html > body {
   font-size: 91%;
   font-weight: bold;
   text-decoration: none;
-  margin: 2.5ex 1ex 0 0;  /* For MSIE */
+  margin: 2.5ex 1ex 0 0;
+  /* For MSIE */
   padding: 0;
   float: right;
 }
 
-#main-copy > .topOfPage {
-  margin: 2.75ex 1ex 0 0;  /* For fully standards-compliant user agents */
+#main-copy>.topOfPage {
+  margin: 2.75ex 1ex 0 0;
+  /* For fully standards-compliant user agents */
 }
 
 pre {
+  outline: 1px solid #ccc;
+  padding: 5px;
   background-color: #D1D1D0;
   overflow: auto;
   font-family: 'Monaco', monospace;
   padding: 1em 1em;
+}
+
+
+.string {
+  color: green;
+}
+
+.number {
+  color: darkorange;
+}
+
+.boolean {
+  color: blue;
+}
+
+.null {
+  color: magenta;
+}
+
+.key {
+  color: red;
 }
 
 img {
