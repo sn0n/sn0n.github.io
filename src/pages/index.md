@@ -1,11 +1,10 @@
 <center>
 
 # Welcome
-<canvas id="blokzCanva"></canvas>
-  
+
 </center>
 
-<script defer src="../js/hiveland.js"></script>
+
 
 to sn0n.com. The personal website of Rob Foraker, erm,... sn0n.
 

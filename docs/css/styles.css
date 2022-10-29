@@ -27,6 +27,20 @@ body {
   width: 50%;
 }
 
+
+#game {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  image-rendering: pixelated;
+}
+
 .doNotDisplay {
   display: none;
 }
