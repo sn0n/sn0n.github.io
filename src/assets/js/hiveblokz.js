@@ -2,7 +2,7 @@ var div = document.getElementById('hiveblokz');
 let apinode;
 let frontend;
 let hiveuser = document.currentScript.getAttribute('hiveuser');
-let seperator = "https://blokz.github.io/hiveblokz/seperator.png"
+let seperator = "../images/seperator.png"
 //frontend
 if (!document.currentScript.getAttribute('frontend')) {
     console.log("frontend not set, using personal.community");

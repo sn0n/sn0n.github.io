@@ -125,6 +125,7 @@ html>body {
 
 /* ##### Main Copy ##### */
 #main-copy {
+  max-width: 70ch;
   color: black;
   background-color: white;
   text-align: justify;
