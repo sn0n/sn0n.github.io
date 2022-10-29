@@ -1,24 +1,26 @@
 # Welcome
 to sn0n.com. The personal welsite of Rob Foraker, erm,... sn0n.
 
-## Currently interested in the following topics and stuff:
+## Interests
 
 ##### General
 
-personal development & self-help (midlife crisis of a mess)
+learning\
+personal development & self-help (midlife crisis of a mess)\
+avoiding 
 
 ##### Programming
 
-Javascript 
-Dart / Flutter (just looking for now)
+Web & Javascript Things
 
 ##### Tinkering (or playing)
 
-Terraria <br />
-Ingress <br />
-Final Fantasy 1 (PSP) <br />
-Chess <br />
-
+Magic: The Gathering\
+Terraria\
+Ingress\
+Final Fantasy 1\
+Chess\
+more...
 
 # useful tips 
 when you see 
