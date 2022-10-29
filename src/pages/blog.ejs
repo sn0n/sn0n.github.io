@@ -1,39 +1,7 @@
-<script src="https://cdn.jsdelivr.net/remarkable/1.7.1/remarkable.min.js" defer></script>
-
-<script>
-    var div = document.getElementById('main-copy');
-
-    window.onload = function loading() {
-        var md = new Remarkable();
-        md.set({
-            html: true,
-            breaks: true,
-            xhtmlOut: true,
-            linkify: true
-        });
-        var fetchNow = function () {
-            fetch("https://api.hive.blog", {
-                body: `{"jsonrpc":"2.0", "method":"bridge.get_account_posts", "params":{"sort":"posts", "account": "sn0n", "limit": 10}, "id":1}`,
-                headers: {
-                    "Content-Type": "application/x-www-form-urlencoded"
-                },
-                method: "POST"
-            }).then(response => response.json()).then(data => {
-                console.log(data.result[0])
-                data.result.forEach(element => {
-                    console.log("texting + " + JSON.stringify(element))
-                    var recent1 = JSON.parse(JSON.stringify(element));
-                    //console.log("recent1 from main: " + recent1.body);
-                    var recent1date = recent1.created.slice(0, 10);
-                    post1 = md.render(recent1.body).replace("\n", "");
-                    post1 = post1.replace(new RegExp("<img ", 'g'), "<img width='80%' ");
-                    div.innerHTML += '<div id="post"><div id="posthead">' + recent1.title + "</div><small>" + recent1date + "</small><div id='postbody'>" + post1 + "</div></div><img src='../images/seperator.png' width='99%' />";
-                });
-                // view more on peakd
-                div.innerHTML += "<br /><div style='display: block; padding: 1em; margin: 1em;  text-align: left'>View More on <a href='http://personal.community/@sn0n' target='_blank'>http://personal.community/@sn0n</a></div>";
-
-            });
-        }
-        fetchNow();
-    };
-</script>
+<div id="hiveblokz"></div>
+<script
+ hiveuser="sn0n" 
+ frontend="leofinance.io" 
+ apinode="api.hive.blog" 
+ src="../js/hiveblokz.js" 
+  type="text/javascript"></script>

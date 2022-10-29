@@ -223,3 +223,14 @@ html > body {
 #main-copy > .topOfPage {
   margin: 2.75ex 1ex 0 0;  /* For fully standards-compliant user agents */
 }
+
+pre {
+  background-color: #D1D1D0;
+  overflow: auto;
+  font-family: 'Monaco', monospace;
+  padding: 1em 1em;
+}
+
+img {
+  max-width: 80%;
+}
