@@ -21,10 +21,10 @@ body {
   padding: 0;
 }
 
-#myCanvas {
+#blokzCanva {
   margin: auto;
   background: #ffffff;
-  border: 3px solid green;
+  border: 1px solid black;
   width: 60ch;
   height: 20ch;
 }
