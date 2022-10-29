@@ -1,8 +1,10 @@
 <center>
 
 # Welcome
-
+<canvas id="myCanvas"></canvas>
 </center>
+
+
 to sn0n.com. The personal website of Rob Foraker, erm,... sn0n.
 
 ## Interests
@@ -23,6 +25,7 @@ Magic: The Gathering\
 Terraria\
 Ingress\
 Final Fantasy 1\
+Pokemon\
 Chess\
 more...
 

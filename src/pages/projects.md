@@ -7,7 +7,7 @@
 
 ### Learn With Me
 website: [sn0n.github.io/learnwithme/](https://sn0n.github.io/learnwithme/)\
-A simple webapp to Learn sightwords, numbers and letters. Currently you can click the words to have it spoken with a next button. Keeping the app as simple and uncluttered as possible for easy non distracted learning. Will eventually ass seizure inducing flashy things that kids love to bombard their little brains with. 
+A simple webapp to Learn sightwords, numbers and letters. Currently you can click the words to have it spoken with a next button. Keeping the app as simple and uncluttered as possible for easy non distracted learning. Will eventually add seizure inducing flashy things that kids love to bombard their little brains with. 
 Will be adding more features to this, shapes, colors and more. 
 
 source & such: [github.com/sn0n/learnwithme](https://github.com/sn0n/learnwithme)

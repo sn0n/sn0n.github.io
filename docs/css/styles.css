@@ -21,7 +21,13 @@ body {
   padding: 0;
 }
 
-
+#myCanvas {
+  margin: auto;
+  background: #ffffff;
+  border: 3px solid green;
+  width: 60ch;
+  height: 20ch;
+}
 
 .doNotDisplay {
   display: none;
