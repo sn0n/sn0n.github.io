@@ -1,4 +1,8 @@
+<center>
+
 # Welcome
+
+</center>
 to sn0n.com. The personal website of Rob Foraker, erm,... sn0n.
 
 ## Interests
