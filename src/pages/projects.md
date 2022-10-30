@@ -49,7 +49,7 @@ source & such: [github](https://github.com/blokz/hiveblokz)
 ![](../images/seperator.png)
 
 ### download your hive data
-website: [hive-export.blokz.io/](https://hive-export.blokz.io/)\ 
+website: [hive-export.blokz.io/](https://hive-export.blokz.io/)\
 Currently a tool to download hive posts in .md format as a .zip file. Will eventually also download custom_json and transactions in .csv format.
 
 source & such: [github.com/blokz/hive-downloader](https://github.com/blokz/hive-downloader)
