@@ -6,7 +6,7 @@
 ![](../images/seperator.png)
 
 ### Learn With Me
-website: [sn0n.github.io/learnwithme/](https://sn0n.github.io/learnwithme/)\
+website: [learnwithme.app](https://learnwithme.app/)\
 A simple webapp to Learn sightwords, numbers and letters. Currently you can click the words to have it spoken with a next button. Keeping the app as simple and uncluttered as possible for easy non distracted learning. Will eventually add seizure inducing flashy things that kids love to bombard their little brains with. 
 Will be adding more features to this, shapes, colors and more. 
 
@@ -48,9 +48,9 @@ source & such: [github](https://github.com/blokz/hiveblokz)
 
 ![](../images/seperator.png)
 
-### hivepost download tool
-website: [hive-export.blokz.io/](https://hive-export.blokz.io/) 
-a tool to download hive posts in .md format as a .zip file.
+### download your hive data
+website: [hive-export.blokz.io/](https://hive-export.blokz.io/)\ 
+Currently a tool to download hive posts in .md format as a .zip file. Will eventually also download custom_json and transactions in .csv format.
 
 source & such: [github.com/blokz/hive-downloader](https://github.com/blokz/hive-downloader)
 
