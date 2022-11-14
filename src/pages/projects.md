@@ -1,14 +1,13 @@
 # Projects
 
-<a href='https://blokz.io'>blokz.io</a> is my main project, which has its own set of sub-projects, cuz its a startup and such,... kek</a>.\
-[hextech.group](https://hextech.group/) a hive blockchain witness group ran with @rishi556 & @edicted (hive guiz).
+<a href='https://blokz.io'>blokz.io</a> is my main project. \
+[hextech.group](https://hextech.group/) is a <a href="https://hive.io/">hive</a> blockchain witness group ran primarily with rishi & mr edicted. Most of my projects are blokz first, but some have overlap with hextech and will eventually end up with them in some capacity. 
 
 ![](../images/seperator.png)
 
 ### Learn With Me
 website: [learnwithme.app](https://learnwithme.app/)\
-A simple webapp to Learn sightwords, numbers and letters. Currently you can click the words to have it spoken with a next button. Keeping the app as simple and uncluttered as possible for easy non distracted learning. Will eventually add seizure inducing flashy things that kids love to bombard their little brains with. 
-Will be adding more features to this, shapes, colors and more. 
+A simple webapp to Learn sightwords, numbers and letters. Currently you can click the words to have it spoken with a next button. Keeping the app as simple and uncluttered as possible for easy non distracted learning. Will eventually add seizure inducing flashy things that kids love to bombard their little brains with. Shapes & colors to be added, as well as a user profile type page which will display basic stats and progress within the app.  
 
 source & such: [github.com/sn0n/learnwithme](https://github.com/sn0n/learnwithme)
 
@@ -17,7 +16,10 @@ source & such: [github.com/sn0n/learnwithme](https://github.com/sn0n/learnwithme
 
 ### personal.community
 website: [personal.community](https://personal.community)\
-my hive baby,  is a social media frontend for the $hive blockchain. static site build in mostly vanilla js, keeping libraries to a minimal is a goal... lots of work to do and such, but its a fully functional hive frontend (make sure to use [hive keychain](https://hive-keychain.com/) for the best experience.) 
+my hive baby. a social media frontend for the $hive blockchain. Static site build, vanilla javascript, keeping libraries to a minimal as a goal... lots of work to do and such, but its a fully functional hive frontend. Lots to be added and changed still, the major ones currently being caching posts to indexeddb and possbily to a pocketbase db in the future. One aim for personal.community is to take away a bit of the crytocurrency and finance aspects of the blockchain, and instead focus on connecting better with the people you actually interact with daily, your personal community. 
+
+
+Make sure to use [hive keychain](https://hive-keychain.com/) for the best experience. 
 
 source & such: [github.com/blokz/personal.community](https://github.com/blokz/personal.community)
 
@@ -48,9 +50,9 @@ source & such: [github](https://github.com/blokz/hiveblokz)
 
 ![](../images/seperator.png)
 
-### download your hive data
+### hive post export tool
 website: [hive-export.blokz.io/](https://hive-export.blokz.io/)\
-Currently a tool to download hive posts in .md format as a .zip file. Will eventually also download custom_json and transactions in .csv format.
+Currently a tool to download hive posts in .md format as a .zip file. Will eventually also download custom_json and transactions in .csv format. Thinking about how to handle assets within the post, primarily images as most markdown editors support displaying them. Also looking at hive-engine possibities. As well as a content mirror of sorts outside of hive, either able to be selfhosted (it would be open-source) or using hextech.group. 
 
 source & such: [github.com/blokz/hive-downloader](https://github.com/blokz/hive-downloader)
 
@@ -80,18 +82,22 @@ source & such: [github.com/blokz/self-help.dev](https://github.com/blokz/self-he
 
 # others
 
-A couple other 'someday' projects would be like, [self-hosted.info](https://self-hosted.info), eventually will have a bunch of resources for setting up a homelab for projects or even things like setting up nextcloud and other servers using as little as a spare computer up to setting up a rack.
+###### [self-hosted.info](https://self-hosted.info)
+ eventually will have a bunch of resources for setting up a homelab for projects such as nextcloud and other servers with as little as a spare computer scaling up towards a full rack.
+
+###### Discord Bot (ltl.bot)
+a discord bot for the blokz community. Basics are setup and functional, connects to discord, responds to a few commands, fetches data from an api & posts portions of that information to a channel every 5 minutes (status updates).
+
+###### playground
+Whatever experimental webapp tech I'm playing with can be found in the <a href='../playground/'>../playground</a> area. 
+Currently tinkering with encryption(aes256), wordlists & pocketbase, not sure what i'll eventually build, but its just a project with no real aim at the moment. Exploring implementation of various javascript methodologies I'm unfamiliar with or otherwise working on, my little `sandbox of learning` if you will. 
 
 
+![](../images/seperator.png)
 
-Whatever experimental js I'm playing with can be found in the <a href='../playground/'>../playground</a> area. 
-Currently tinkering with encryption things.. ish... more on that later, if my idea there goes anywhere. https://www.eff.org/dice && 
-https://github.com/mervick/aes-everywhere/tree/master/javascript are two libraries I'm interested in there.... I'm sure i'll be adding more later. 
+#### template: 
+<small>
 
-
-
-
-template: 
 ```
 ### header
 website: []()\
@@ -101,7 +107,7 @@ source & such: []()
 
 ![](../images/seperator.png)
 ```
-
+</small>
 
 
 

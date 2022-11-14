@@ -62,14 +62,10 @@
 <main id="main-copy" style="min-height: 150vh;">
   
 <!-- <h1>#DriveIdeas2Creation in a sandbox</h1> -->
-<canvas id="blokzCanva"></canvas>
   
-  <div id="game">
-  <canvas id="canvas"></canvas>
-</div>
 <script defer src="../js/hiveland.js"></script>
 
-
+<script src="../js/pocketbase.umd.js"></script>
 <script src="../js/aes256.min.js?ver=5.2"></script>
 <script src="../js/wordlist.js?ver=5.2"></script>
 
@@ -86,12 +82,10 @@
 </div>
 
 
-
-
-
-
-
 <script>
+// playing with pocketbase
+
+
 
     function output(inp) {
         document.body.appendChild(document.createElement('pre')).innerHTML = inp;
@@ -112,7 +106,7 @@
             } else if (/null/.test(match)) {
                 cls = 'null';
             }
-            return '<span class="' + cls + '">' + match + '</span>';
+            return '<div class="' + cls + '">' + match + '</div>';
         });
     }
 
@@ -127,21 +121,22 @@ let user;
         let user = document.getElementById("fname").value;
         blokzchain_json =
     {
-        "blokzbox": [
-            'craft',
-            {
                 "user": user,
+                "passphrase": passphrase,
                 "package": encrypted
-            }
-        ]
+          
     }
+    client.records.create('demo', {
+           "blokzbox": blokzchain_json
+});
     console.log("json" + JSON.stringify(blokzchain_json))
         // hivejs.broadcast.customJson(wif, requiredAuths, requiredPostingAuths, id, json, function(err, result) {
         //console.log(err, result);
         //});
         console.log(JSON.parse(passed));
         passed = JSON.stringify(blokzchain_json);
-        document.getElementById("playground").innerHTML = "<h3>payload:</h3><pre>" + syntaxHighlight(passed) + "</pre><h3>decrypted message: </h3> "+AES256.decrypt(encrypted, passphrase)+"<h2><a href='./'>return</a></h2>";
+       
+        document.getElementById("playground").innerHTML = "<h3>payload:</h3><div class='pre'>" + syntaxHighlight(passed) + "</div><h3>decrypted message: </h3> "+AES256.decrypt(encrypted, passphrase)+"<h2><a href='./'>return</a></h2>";
     }
 
     document.getElementById("playground").innerHTML += "Passphrase <small>(generated at random)</small><br />";
@@ -159,7 +154,7 @@ let user;
         document.getElementById("playground").innerHTML += "<span style='padding-left: 1em'>" + WordList[dice] + "</span>";
     }
     // encryption
-    var encrypted = AES256.encrypt('Words, Pictures, things & such! mang', passphrase);
+    var encrypted = AES256.encrypt('Words, Pictures, things & such!', passphrase);
     document.getElementById("playground").innerHTML += '<br /><br /><div>text we are encrypting (message): <br /> Words, Pictures, things & such!</div>';
     document.getElementById("playground").innerHTML += "<br /><div>encrypted <small>w/passphrase</small> (package):</div><div>" + encrypted + "</div>";
     // decryption
