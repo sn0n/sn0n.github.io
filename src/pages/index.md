@@ -4,11 +4,9 @@
 
 </center>
 
-
-
 Welcome to sn0n.com. The personal website of Rob Foraker, erm,... sn0n.
 
-## Interests
+### Interests
 
 ##### General
 
@@ -30,7 +28,7 @@ Pokemon\
 Chess\
 more...
 
-# useful tips 
+###### useful tips 
 when you see 
 <img onclick="javascript:location.href='#'" src="../images/puffboy.gif" height="30px" width="30px"> down below you can click him to goto the ^ top of the page.
 
