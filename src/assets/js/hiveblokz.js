@@ -15,7 +15,7 @@ if (!document.currentScript.getAttribute('frontend')) {
 // hive node options : https://developers.hive.io/quickstart/hive_full_nodes.html
 if (!document.currentScript.getAttribute('apinode')) {
     console.log("api node not set, using hextech");
-    apinode = "https://api.hextech.group"
+    apinode = "https://api.hextech.group/"
 } else {
     console.log("api node set: " + document.currentScript.getAttribute('apinode'))
     apinode = "https://" + document.currentScript.getAttribute('apinode')
