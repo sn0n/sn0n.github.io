@@ -17,7 +17,7 @@ if (!document.currentScript.getAttribute('apinode')) {
     console.log("api node not set, using deathwing");
     apinode = "https://api.deathwing.me"
 } else {
-    console.log("api node set" + document.currentScript.getAttribute('apinode'))
+    console.log("api node set: " + document.currentScript.getAttribute('apinode'))
     apinode = "https://" + document.currentScript.getAttribute('apinode')
 }
 // markdown parser from : https://codepen.io/kvendrik/pen/bGKeEE
