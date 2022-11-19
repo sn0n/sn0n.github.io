@@ -4,6 +4,7 @@ I am Snahn ip<br />
 aka: sn0n <br />
 but really, Rob Foraker. 
 
+# /rant
 everyone: what is the point of using an alias if you just say who you are behind the alias?<br />
 rob: \*shrugs\* i like pi!
 
@@ -24,6 +25,11 @@ Breaking down a creative process in one area of life will have benefits in other
 Anyways, I hope you enjoyed that little glimpse into me, and enjoy this site I've assembled for you, and selfishly, myself. Enjoy.
 
 The above stolen & edited from  <a href="https://personal.community/@sn0n">personal.community/@sn0n</a> 
+# /endrant
+ok, moving right along...
 
+# This site 
+
+[source](https://git.sn0n.com/) & [mirror](https://github.com/sn0n/sn0n.github.io).
 
 <a class="topOfPage" href="#top" title="Go to the top of this page">^ TOP</a>
