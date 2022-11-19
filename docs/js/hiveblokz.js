@@ -60,6 +60,7 @@ var fetchPosts = function () {
         headers: {
             "Content-Type": "application/x-www-form-urlencoded"
         },
+        redirect: 'follow',
         method: "POST"
     }).then(response => response.json()).then(data => {
         // console.log(data.result[0])
