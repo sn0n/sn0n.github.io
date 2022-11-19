@@ -1,0 +1,44 @@
+
+<!-- <h1>#DriveIdeas2Creation in a sandbox</h1> -->
+  
+
+<script src="../js/pocketbase.umd.js"></script>
+
+<strong>Join my mailing list</strong><br />
+<label>name</label><br /><input type='text' id='name' name='name'><br>
+<label>email </label><br /><input type='text' id='email' name='email'><br>
+<br /><button onclick="signup()">Sign Up</button>
+
+
+
+
+<script>
+// playing with pocketbase
+
+
+const client = new PocketBase('https://pb.blokz.io/');
+
+function signup() {
+
+ let email = document.getElementById("email").value;
+ let name = document.getElementById("name").value;
+    client.records.create('mailing_list', {
+           "email": email, 
+           "name": name
+});
+console.log('sent')
+document.getElementById("main-copy").innerHTML = "submission received for<br />" + 
+name + "(" +
+email+ ")";
+}
+
+
+
+
+
+
+console.log('all done')
+</script>
+
+
+<a class="topOfPage" href="#top" title="Go to the top of this page">^ TOP</a>
