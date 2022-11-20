@@ -1,25 +1,20 @@
+<div style="width: fit-content; padding: 2ch 5ch; margin: auto; margin-top: 2ch; border: 1px solid black;">
+<h1>Join my mailing list</h1>
+<label>name</label><br />
+&nbsp;&nbsp;<input type='text' id='name' name='name'><br>
+<label>email </label><br />
+&nbsp;&nbsp;<input type='text' id='email' name='email'><br>
+<br /><div style="text-align: right;"><button onclick="signup()">Sign Up</button></div>
+</div>
 
-<!-- <h1>#DriveIdeas2Creation in a sandbox</h1> -->
-  
 
 <script src="../js/pocketbase.umd.js"></script>
 
-<strong>Join my mailing list</strong><br />
-<label>name</label><br /><input type='text' id='name' name='name'><br>
-<label>email </label><br /><input type='text' id='email' name='email'><br>
-<br /><button onclick="signup()">Sign Up</button>
-
-
-
-
 <script>
 // playing with pocketbase
-
-
 const client = new PocketBase('https://pb.blokz.io/');
 
 function signup() {
-
  let email = document.getElementById("email").value;
  let name = document.getElementById("name").value;
     client.records.create('mailing_list', {
@@ -29,16 +24,13 @@ function signup() {
 console.log('sent')
 document.getElementById("main-copy").innerHTML = "submission received for<br />" + 
 name + "(" +
-email+ ")";
+email+ ")" +
+"<br /><a href='../'>return</a>";
 }
-
-
-
-
-
 
 console.log('all done')
 </script>
+
 
 
 <a class="topOfPage" href="#top" title="Go to the top of this page">^ TOP</a>

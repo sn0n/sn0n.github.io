@@ -4,7 +4,8 @@
 
 </center>
 
-Welcome to sn0n.com. The personal website of Rob Foraker, erm,... sn0n.
+Welcome to sn0n.com. The personal website of Rob Foraker, erm,... sn0n. \
+Did you really come just to sign up for the [mailing list](../mailinglist/)? or peep my <small>(not)</small>[linktr.ee](../social)? huh, interesting.. 
 
 ### Interests
 
