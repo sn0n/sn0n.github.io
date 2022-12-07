@@ -1,0 +1,7 @@
+{
+    "@context": "https://www.w3.org/ns/activitystreams",
+    "id": "https://sn0n.com/followers",
+    "type": "OrderedCollection",
+    "totalItems": 42000000,
+    "first": "https://sn0n.com/follower_accts"
+}
