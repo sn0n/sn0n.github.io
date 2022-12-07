@@ -1,0 +1,31 @@
+{
+    "@context": [
+        "https://www.w3.org/ns/activitystreams",
+        "https://w3id.org/security/v1"
+    ],
+    "id": "https://sn0n.com/rob",
+    "type": "Person",
+    "following": "https://sn0n.com/following",
+    "followers": "https://sn0n.com/followers",
+    "featured": "https://sn0n.com/featured",
+    "inbox": "https://sn0n.com/inbox",
+    "outbox": "https://sn0n.com/outbox",
+    "preferredUsername": "justin",
+    "name": "Justin Garrison",
+    "summary": "Static mastodon server example.",
+    "url": "https://sn0n.com",
+    "manuallyApprovesFollowers": true,
+    "discoverable": true,
+    "published": "2002-07-01T00:00:00Z",
+
+    "icon": {
+        "type": "Image",
+        "mediaType": "image/jpeg",
+        "url": "https://sn0n.com/demo.jpg"
+    },
+    "image": {
+        "type": "Image",
+        "mediaType": "image/jpeg",
+        "url": "https://sn0n.com/background.png"
+    }
+}
