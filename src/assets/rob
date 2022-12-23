@@ -14,7 +14,7 @@
     "name": "Snahn ip",
     "summary": "i like pi",
     "url": "https://sn0n.com",
-    "manuallyApprovesFollowers": false,
+    "manuallyApprovesFollowers": true,
     "discoverable": true,
     "published": "2002-07-01T00:00:00Z",
 
