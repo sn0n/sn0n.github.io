@@ -14,7 +14,8 @@ huh, interesting..
 
 learning\
 personal development & self-help (midlife crisis of a mess)\
-avoiding 
+avoiding \
+<a rel="me" href="https://mastodon.social/@sn0n">Mastodon</a>
 
 ##### Programming
 
