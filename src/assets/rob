@@ -21,11 +21,11 @@
     "icon": {
         "type": "Image",
         "mediaType": "image/jpeg",
-        "url": "https://sn0n.com/icon.jpg"
+        "url": "https://sn0n.com/images/icon.jpg"
     },
     "image": {
         "type": "Image",
         "mediaType": "image/jpeg",
-        "url": "https://sn0n.com/image.jpg"
+        "url": "https://sn0n.com/images/image.jpg"
     }
 }
